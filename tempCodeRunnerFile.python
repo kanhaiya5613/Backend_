@@ -1,0 +1,6 @@
+from google.cloud import storage
+
+client = storage.Client()
+bucket = client.get_bucket('qwiklabs-gcp-03-7987a5f5df71-labconfig-bucket')
+blob = bucket.blob('img/cymbal-product-image.png')
+blob.download_to_filename('cymbal-product-image.png')
